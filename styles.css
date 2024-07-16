@@ -1,0 +1,107 @@
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling header */
+#header {
+  background-color: #f2f2f2;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Styling navbar */
+#navbar {
+  display: flex;
+  align-items: center;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+}
+
+#menu li {
+  margin: 0 10px;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+#menu li a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Sticky navbar */
+#navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+#navbar.sticky #menu {
+  justify-content: flex-end;
+}
+
+/* Responsive Styles */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  #menu li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Main content styling */
+main {
+  padding: 20px 0;
+}
+
+main .container {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
